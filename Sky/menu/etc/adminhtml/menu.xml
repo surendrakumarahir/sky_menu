@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+       <!-- <add id="Magento_Catalog::catalog" title="Products" translate="title" module="Magento_Catalog" sortOrder="20" dependsOnModule="Magento_Catalog" resource="Magento_Catalog::catalog"/>
+        <add id="Magento_Catalog::catalog_products" title="Catalog" translate="title" module="Magento_Catalog" sortOrder="10" parent="Magento_Catalog::inventory" action="catalog/product/" resource="Magento_Catalog::products"/>
+        <add id="Magento_Catalog::catalog_categories" title="Categories" translate="title" module="Magento_Catalog" sortOrder="20" parent="Magento_Catalog::inventory" action="catalog/category/" resource="Magento_Catalog::categories"/>
+        <add id="Magento_Catalog::catalog_attributes_attributes" title="Product" translate="title" module="Magento_Catalog" sortOrder="30" parent="Magento_Backend::stores_attributes" action="catalog/product_attribute/" resource="Magento_Catalog::attributes_attributes"/>
+        <add id="Magento_Catalog::catalog_attributes_sets" title="Attribute Set" translate="title" module="Magento_Catalog" sortOrder="40" parent="Magento_Backend::stores_attributes" action="catalog/product_set/" resource="Magento_Catalog::sets"/>-->
+      <!-- added menu in product menu , Test tag  one menu in Test is First -->
+        <add id="Sky_Menu::test" title="Test" translate="title" module="Sky_Menu" sortOrder="20" parent="Magento_Catalog::catalog" dependsOnModule="Magento_Catalog" resource="Magento_Catalog::catalog"/>
+       <add id="Sky_Menu::test_first" title="First" translate="title" module="Sky_Menu" sortOrder="10" parent="Sky_Menu::test"  action="catalog/product_set/" resource="Sky_Menu::test_first"/>
+
+    <!--add menu in product inventory-->
+<add id="Sky_Menu::test_seconde" title="second" translate="title" module="Sky_Menu" sortOrder="30" parent="Magento_Catalog::inventory"  action="test/test/" resource="Sky_Menu::test_second"/>
+ <!-- id unique identity ,  title which show in menu , module is your current module name , sortOrder order of menu , parend parent id under menu show , action  action of menu link , resource use in Alc leter -->
+
+      
+
+    </menu>
+</config>
